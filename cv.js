@@ -109,25 +109,3 @@ Up.addEventListener('click', function() {
     ProSkills()
     active(a)
 })
-
-// Up.addEventListener('click', function() {
-//     console.log(a)
-//     if(a == 0) {
-//         a = slide.length - 1
-//     }else {
-//         a--
-//     }
-//     update(a)
-// })
-
-// ---------------------------------
-
-// Down.addEventListener('click', function() {
-//     console.log(a)
-//     if(a == slide.length - 1) {
-//         a = 0
-//     }else {
-//         a++
-//     }
-//     update(a)
-// })
