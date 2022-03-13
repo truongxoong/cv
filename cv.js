@@ -10,6 +10,7 @@ let h3 = document.querySelectorAll('.all h3')
 let iResume = document.querySelectorAll('.education h2 i')
 let h3Resume = document.querySelectorAll('.eduContent .borderBottom')
 let Doc = document.querySelector('.education .doc')
+let Active = document.querySelectorAll('.icon_left > i')
 
 function update(x) {
     slide.forEach(function(link) {
@@ -19,6 +20,13 @@ function update(x) {
     })
     a = x
     slide[x].classList.add('iconMenu')
+}
+
+function active(index) {
+    Active.forEach(function(e) {
+        e.classList.remove('active')
+    })
+    Active[index].classList.add('active')
 }
 
 function ProSkills() {
@@ -78,6 +86,7 @@ iconLeft.forEach(function(btn, index) {
     btn.addEventListener('click', function() {
         update(index)
         ProSkills()
+        active(index)
     })
 })
 // -----------------------------
@@ -89,6 +98,7 @@ Down.addEventListener('click', function() {
     a = (a+1) % slide.length
     slide[a].classList.add('down')
     ProSkills()
+    active(a)
 })
 Up.addEventListener('click', function() {
     slide[a].classList.remove('up')
@@ -97,6 +107,7 @@ Up.addEventListener('click', function() {
     a = ((a-1) + slide.length) % slide.length
     slide[a].classList.add('up')
     ProSkills()
+    active(a)
 })
 
 // Up.addEventListener('click', function() {
