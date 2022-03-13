@@ -145,16 +145,18 @@ img {
     font-size: 30px;
     font-weight: bold;
     color: #1ab394;
-    animation: up 3s;
 }
-/* @keyframes up{
+.skillsH3 {
+    animation: proText 3s ease forwards;
+}
+@keyframes proText{
     0% {
         transform: scale(0);
     }
     100% {
         transform: scale(1);
     }
-} */
+}
 .professional {
     width: 80%;
     padding: 20px 30px;
@@ -191,8 +193,8 @@ img {
     padding-top: 50px;
     display: flex;    
 }
-/* .english {
-    animation: englishLeft 3s;
+.english {
+    animation: englishLeft 2s ease forwards;
 }
 @keyframes englishLeft{
     0% {
@@ -203,7 +205,7 @@ img {
     }
 }
 .personal {
-    animation: personalRight 3s;
+    animation: personalRight 2s ease forwards;
 }
 @keyframes personalRight{
     0% {
@@ -212,7 +214,7 @@ img {
     100% {
         transform: translateX(0%);
     }
-} */
+}
 .red {
     width: 100px;
     height: 100px;
@@ -250,6 +252,26 @@ img {
 
 .education {
     width: 50%;
+    position: relative;
+}
+.education .doc {
+    position: absolute;
+    top: 10%;
+    left: 134%;
+    width: 1px;
+    height: 90%;
+    background: #8eccc0;    
+}
+.Doc {
+    animation: borderExpe 3s ease forwards ;
+}
+@keyframes borderExpe {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 90%;
+    }
 }
 .education h2 {
     font-size: 35px;
@@ -261,19 +283,22 @@ img {
 .education h2 i {
     color: white;
     padding-left: 20px;
+}
+.iconResume {
     animation: iconEdu 2s ease;
 }
 @keyframes iconEdu {
     0% {
-        transform: translateY(-300%);
+        transform: translateY(-350%);
     }
     100% {
         transform: translateY(0%);
     }
 }
 .eduContent {
-    padding-bottom: 30px;
     position: relative;
+    padding-bottom: 1px;
+    padding-top: 30px;
 }
 
 .eduContent h4 {
@@ -291,33 +316,26 @@ img {
     font-size: 25px;
     font-weight: bold;
     padding-bottom: 40px;
-    width: 70%;
-    animation: textEdu 5s;
+    
+}
+.eduContent .borderBottom {
+    position: absolute;
+    top: 93%;
+    width: 75%;
+    height: 1px;
+    background: #8eccc0;
+}
+.textEdu {
+    animation: textEdu 3s;
 }
 @keyframes textEdu {
     0% {
         opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-.eduContent h3::after {
-    position: absolute;
-    top: 75%;
-    left: 0%;
-    content: "";
-    height: 1px;
-    width: 70%;
-    background: #8eccc0;
-    animation: border 3s;
-}
-@keyframes border {
-    0% {
         width: 0%;
     }
     100% {
-        width: 70%;
+        opacity: 1;
+        width: 75%;
     }
 }
 .eduContent .lastChild {
@@ -326,24 +344,6 @@ img {
 .experience {
     margin-left: 250px;
     position: relative;
-}
-.experiences::after {
-    position: absolute;
-    content: "";
-    top: 10%;
-    left: -30%;
-    width: 2px;
-    height: 90%;
-    background: rgba(207, 202, 207, 0.5);
-    animation: borderExpe 2s;
-}
-@keyframes borderExpe {
-    0% {
-        height: 0%;
-    }
-    100% {
-        height: 90%;
-    }
 }
 
 /* Resume */
@@ -445,7 +445,9 @@ img {
     background: #343539;
     color: white;
     padding: 80px;
+    /* opacity: 0; */
     transform: scale(0);
+    /* pointer-events: none; */
 }
 .contactMenu h2, 
 .Product h2 {
