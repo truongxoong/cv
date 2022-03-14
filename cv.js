@@ -12,6 +12,7 @@ let h3Resume = document.querySelectorAll('.eduContent .borderBottom')
 let Doc = document.querySelector('.education .doc')
 let Active = document.querySelectorAll('.icon_left > i')
 
+
 function update(x) {
     slide.forEach(function(link) {
         link.classList.remove('up')
